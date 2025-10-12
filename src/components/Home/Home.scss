@@ -1,0 +1,75 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+#home {
+    .video-container {
+        position: relative;
+        z-index: -1;
+        height: 100vh;
+        @include flex-center;
+
+        video {
+            @extend %full-screen-fixed;
+            object-fit: cover;
+        }
+    }
+
+    .overlay {
+        @extend %full-screen-fixed;
+        @include flex-center;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+
+
+        h2 {
+            position: relative;
+            z-index: 10;
+            color: $primary-font-color;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            animation: pulse 1.5s ease-in-out infinite alternate;
+        }
+
+        p {
+            position: relative;
+            z-index: 10;
+            color: $secondary-font-color;
+            font-size: clamp(1rem, 1vw, 2rem);
+            font-weight: 100;
+            margin-top: 0.4rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            font-weight: 300;
+            z-index: 10;
+
+            a {
+                @include button-links;
+
+                &:hover {
+                    color: $primary-font-color;
+                    box-shadow: $box-shadow;
+                    transform: translateY(-3px);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes pulse {
+    from{
+        color: $secondary-font-color;
+    }
+    to{
+        color: $primary-font-color;
+    }
+}

@@ -4,7 +4,7 @@
 
 #about {
     @extend %section;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 10vh;
 
     .about-title {
@@ -42,14 +42,14 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
             padding-top: 10vh;
 
             .about-box{
-                width: 75ch;
+                width: 700px;
                 border: 2px solid $primary-font-color;
                 padding: 20px;
                 border-radius: 8px;
-                box-shadow: $box-shadow;
             }
         }
     }

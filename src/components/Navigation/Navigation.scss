@@ -37,12 +37,16 @@
                        
                 }
                 :hover{
-                    color: $primary-font-color;
-                    border-bottom: 1px solid $primary-font-color;
+                        background-color: $secondary-font-color;
+                        padding: 8px 16px;
+                        border-radius: 12px;
+                        color: $primary-font-color;
                 }
                 &.active{
                     >a{
-
+                        background-color: $secondary-font-color;
+                        padding: 8px 16px;
+                        border-radius: 12px;
                         color: $primary-font-color;
                     }
 

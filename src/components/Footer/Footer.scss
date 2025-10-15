@@ -1,0 +1,37 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.footer-container {
+    @include flex-center(column);
+    background: $background;
+    color: $secondary-font-color;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 9;
+  
+    .social-icons {
+      margin-top: 10px;
+  
+      a {
+        display: inline-block;
+        margin: 0 10px;
+        color: $secondary-font-color;
+        font-size: 1.3rem;
+        transition: all 0.5s ease;
+  
+          &:hover,
+      &:focus {
+        color: $primary-font-color;
+        transform: translateY(-6px) scale(1.06); // move up and slightly zoom
+      }
+
+      &:active {
+        transform: translateY(-2px) scale(0.99); // subtle pressed state
+      }
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
+}

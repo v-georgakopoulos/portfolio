@@ -1,3 +1,4 @@
+import Slider from "../Slider/Slider"
 import profileImage from "../../assets/about-image.jpg"
 import "./About.scss"
 
@@ -24,7 +25,7 @@ const About = () => {
                 while also standing out through hard work and commitment.</p>
           </div>
           <div className="about-box">
-
+            <Slider/>
           </div>
           <div className="about-box">
             <p>My goals are to keep growing as a developer. 

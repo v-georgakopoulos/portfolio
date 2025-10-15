@@ -1,14 +1,25 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./Navigation.scss"
 
 const Navigation = () => {
 
   const [active,setActive] = useState('home')
+  const [isScrolled,setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0)
+    }
+    window.addEventListener("scroll",handleScroll)
+    return () => window.removeEventListener("scroll",handleScroll)
+  },[])
 
   return (
-    <nav className="nav-container">
+    <nav className={`nav-container ${isScrolled ? "scrolled" : ""}`}>
         <div className="nav-left">
-            <span>v-<span className="last-name">georgakopoulos</span></span>
+            <span>v</span>
+            <span>&ndash;</span>
+            <span className="last-name">georgakopoulos</span>
         </div>
       <div className="nav-right">
         <ul>

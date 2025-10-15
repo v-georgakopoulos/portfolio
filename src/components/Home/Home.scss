@@ -27,7 +27,7 @@
             z-index: 10;
             color: $primary-font-color;
             font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 400;
+            font-weight: 600;
             animation: pulse 1.5s ease-in-out infinite alternate;
         }
 
@@ -37,14 +37,13 @@
             color: $secondary-font-color;
             font-size: clamp(1rem, 1vw, 2rem);
             font-weight: 100;
-            margin-top: 0.4rem;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1.5rem;
-            margin-top: 2rem;
-            font-weight: 300;
+            margin-top: 1rem;
+            font-weight: 100;
             z-index: 10;
 
             a {
@@ -71,5 +70,6 @@
     }
     to{
         color: $primary-font-color;
+         text-shadow:$box-shadow;
     }
 }

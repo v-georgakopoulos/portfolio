@@ -10,8 +10,15 @@
     align-items: center;
     justify-content: space-between;
     padding-left: 20px;
+    transition:  backdrop-filter 0.3s ease;
+
+    &.scrolled {
+       -webkit-backdrop-filter: blur(16px);
+       backdrop-filter: blur(16px);
+    }
 
     .nav-left{
+        padding-left: 20px;
         span{
             color: $primary-font-color;
         }

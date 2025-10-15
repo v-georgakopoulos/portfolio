@@ -4,6 +4,142 @@
 
 #contact {
     @extend %section;
-    min-height: 100vh;
+    height: 100vh;
     padding-top: 10vh;
+    
+    .contact-title{
+            text-align: center;
+            font-size: 2rem;
+            opacity: 0;
+    }
+        &.active{
+        opacity: 1;
+        transform: translateY(0);
+        }
+    
+
+    .contact-container{
+        display: flex;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+
+        &.active{
+        opacity: 1;
+        transform: translateY(0);
+        }
+    
+        .contact-left{
+            flex:1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 10vh;
+
+
+           .contact-info{
+            display: flex;
+            flex-direction: column;
+            padding-top: 10vh;
+            .contact-info-box{
+                display: flex;
+                align-items: center;
+                
+                .contact-info-details{
+                    width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                p{
+                    color: $secondary-font-color;
+                }
+            }
+           }
+        }
+        .contact-right{
+            flex:1;
+            @include flex-start;
+            padding-top: 10vh;
+            form {
+                background-color: $background-alt;
+                width: 700px;
+                padding: 20px;
+                border-radius: 20px;
+                font-size: 1rem;
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+
+                    .form-group {
+                        display: flex;
+                        flex-direction: column;
+
+                        label {
+                            color: $primary-font-color;
+                            margin-bottom: 5px;
+                        }
+
+                        input {
+                            @extend %contact-input;
+
+                            &:focus {
+                                outline: none;
+                                background-color: darken($input-bg, 10%);
+                            }
+                        }
+                    }
+                }
+
+                .message {
+                    label {
+                        position: relative;
+                        top: 15px;
+                          color: $primary-font-color;
+                    }
+
+                    textarea {
+                        @extend %contact-input;
+                        box-sizing: border-box;
+                        width: 100%;
+                        margin: 20px 20px 0 0;
+                        height: 200px;
+                        resize: vertical;
+
+
+
+                        &:focus {
+                            outline: none;
+                            background-color: darken($input-bg, 10%);
+                        }
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    padding: 15px;
+                    background-color: $secondary-font-color;
+                    border-radius: 8px;
+                    color: $background;
+                    font-size: 1.2rem;
+                    border: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                    margin-top: 20px;
+
+                    &:hover {
+                      background-color: $primary-font-color;
+                    
+                    }
+                }
+                .success-message{
+                    color: $primary-font-color;
+                }
+                .error-message{
+                    color: red;
+                }
+            }
+        }
+    }
 }

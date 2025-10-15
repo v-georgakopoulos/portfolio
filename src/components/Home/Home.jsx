@@ -16,7 +16,7 @@ const Home = () => {
           <a href="/Vasilis-Georgakopoulos-CV.pdf" download>
             Download CV
           </a>
-          <a href="#portfolio">My Projects</a>
+          <a href="#portfolio">View My Work</a>
         </div>
       </div>
     </section>

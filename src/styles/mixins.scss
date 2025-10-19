@@ -44,14 +44,51 @@
 
 @mixin button-links {
   position: relative;
-  padding: 0.75rem 1.75rem;
+  padding: 0.5rem 1.5rem;
   font-size: 1rem;
-  font-weight: 600;
   border: 2px solid $primary-font-color;
-  border-radius: 50px;
+  border-radius: 8px;
   background-color: transparent;
   color: $secondary-font-color;
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: hidden;
+}
+
+// Media Queries
+
+@mixin xs {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: 1536px) {
+    @content;
+  }
 }

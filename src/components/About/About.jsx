@@ -1,6 +1,6 @@
 import { useIntersectionObserver } from "../../utils/intersectionObserver"
 
-import Slider from "../Slider/Slider"
+import CardsSlider from "../CardsSlider/CardsSlider"
 import profileImage from "../../assets/about-image.jpg"
 
 import "./About.scss"
@@ -23,7 +23,7 @@ const About = () => {
           <div className="about-right-container">
             <div className="about-box">
               <p>
-                <span className="phrase">/I'm starting a new journey as a web developer,</span>
+                <span className="phrase">I'm starting a new journey as a web developer,</span>
                 <span className="phrase">and I already love what I do.</span>
                 <span className="phrase">I approach every project with passion and dedication.</span>
                 <span className="phrase">I enjoy growth and self-improvement,</span>
@@ -33,7 +33,7 @@ const About = () => {
               </p>
             </div>
             <div className="about-box">
-              <Slider />
+              <CardsSlider/>
             </div>
             <div className="about-box">
               <p>

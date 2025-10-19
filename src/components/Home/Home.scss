@@ -35,8 +35,11 @@
             position: relative;
             z-index: 10;
             color: $secondary-font-color;
-            font-size: clamp(1rem, 1vw, 2rem);
             font-weight: 100;
+
+            @include xs{
+                width: 30ch;
+            }
         }
 
         .hero-buttons {
@@ -46,8 +49,19 @@
             font-weight: 100;
             z-index: 10;
 
+            @include xs {
+                flex-direction: column;
+            }
+
+
             a {
                 @include button-links;
+
+                     @include xs {
+                        padding: 10px 15px;
+                        font-size: 0.8rem;
+            }
+
 
                 &:hover {
                     color: $primary-font-color;

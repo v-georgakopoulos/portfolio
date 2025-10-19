@@ -33,7 +33,8 @@ const About = () => {
               </p>
             </div>
             <div className="about-box">
-              <CardsSlider/>
+                   <CardsSlider/> 
+                   <div className="overlay"></div>
             </div>
             <div className="about-box">
               <p>

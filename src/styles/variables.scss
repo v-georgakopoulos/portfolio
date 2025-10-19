@@ -1,7 +1,13 @@
 $font-stack: 'Share Tech', sans-serif;
-$background: rgb(13, 13, 13);
-$background-alt: rgb(31, 31, 31);
-$input-bg: lighten($background-alt, 20%);
-$primary-font-color: rgb(0, 255, 213);
-$secondary-font-color: rgba(88, 252, 213, 0.541);
+$background: rgb(15, 15, 15);
+$background-alt: rgb(18, 18, 18);
+$input-bg: lighten($background-alt, 5%);
+// $primary-font-color: rgb(0, 255, 213);
+// $secondary-font-color: rgba(88, 252, 213, 0.541);
+// $box-shadow: 2px 4px 12px $primary-font-color;
+$primary-font-color: rgb(4, 199, 19);
+$secondary-font-color: rgba(4, 148, 16, 0.808);
 $box-shadow: 2px 4px 12px $primary-font-color;
+
+
+

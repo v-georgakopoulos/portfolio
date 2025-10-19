@@ -19,7 +19,7 @@
         @include flex-center;
         flex-direction: column;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8);
 
 
         h2 {
@@ -34,7 +34,7 @@
         p {
             position: relative;
             z-index: 10;
-            color: $secondary-font-color;
+            color: $primary-font-color;
             font-weight: 100;
 
             @include xs{

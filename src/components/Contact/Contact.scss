@@ -80,10 +80,10 @@
                     width: 500px;
                 }
                 @include md {
-                    width: 600px;
+                    width: 700px;
                 }
                 @include sm {
-                    width: 500px;
+                    width: 600px;
                 }
                 @include xs {
                     width: 350px;
@@ -110,7 +110,7 @@
                             }
 
                             &:focus {
-                                outline: none;
+                                        outline: 1px solid $secondary-font-color;
                                 background-color: darken($input-bg, 10%);
                             }
                         }
@@ -135,8 +135,8 @@
 
 
                         &:focus {
-                            outline: none;
-                            background-color: darken($input-bg, 10%);
+                            outline: 1px solid $secondary-font-color;
+                            background-color: darken($input-bg, 30%);
                         }
                     }
                 }

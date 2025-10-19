@@ -1,4 +1,4 @@
-import bgVideo from '../../assets/city-background.mp4'
+import bgVideo from '../../assets/matrix-background.mp4'
 import "./Home.scss"
 
 const Home = () => {

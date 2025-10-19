@@ -2,11 +2,6 @@
 @import "../../styles/variables.scss";
 
 .wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   .container {
     height: 400px;
     display: flex;
@@ -51,14 +46,14 @@
              @include sm{
               width: 18px;
               height: 18px;
-            margin: 5px;
+              margin: 5px;
       }
         }
       }
     }
 
     input:checked + .card {
-      width: 650px;
+      width: 700px;
 
       .description {
         opacity: 1 !important;

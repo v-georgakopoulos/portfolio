@@ -38,10 +38,6 @@ const CardsSlider = () => {
                         >
                             <div className="row">
                                 <div className="icon">{item.id}</div>
-                                {/* <div className="description">
-                                    <h4>{item.title}</h4>
-                                    <p>{item.desc}</p>
-                                </div> */}
                             </div>
                         </label>
                     </Fragment>

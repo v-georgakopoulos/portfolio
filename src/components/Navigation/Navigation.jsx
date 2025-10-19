@@ -47,7 +47,7 @@ const Navigation = () => {
           )
         }
 
-        <ul>
+        <ul className="desktop-menu">
           <li className={active === 'home' ? 'active' : ''} onClick={() => setActive('home')}><a href="#home">home</a></li>
           <li className={active === 'about' ? 'active' : ''} onClick={() => setActive('about')}><a href="#about">about</a></li>
           <li className={active === 'portfolio' ? 'active' : ''} onClick={() => setActive('portfolio')}><a href="#portfolio">portfolio</a></li>

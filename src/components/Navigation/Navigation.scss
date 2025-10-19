@@ -32,35 +32,37 @@
   .nav-right {
     width: 600px;
 
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+     .desktop-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 
-      li {
-        font-weight: 300;
-
-        a {
-          color: $secondary-font-color;
-          transition: all 0.5s ease;
-        }
-
-        :hover {
-          background-color: $secondary-font-color;
-          padding: 8px 16px;
-          border-radius: 8px;
-          color: $primary-font-color;
-        }
-
-        &.active {
-          > a {
+        li {
+          font-weight: 300;
+  
+          a {
+            color: $secondary-font-color;
+            transition: all 0.5s ease;
+          }
+  
+          :hover {
             background-color: $secondary-font-color;
             padding: 8px 16px;
             border-radius: 8px;
             color: $primary-font-color;
           }
+  
+          &.active {
+            > a {
+              background-color: $secondary-font-color;
+              padding: 8px 16px;
+              border-radius: 8px;
+              color: $primary-font-color;
+            }
+          }
         }
       }
+
     }
 
     .mobile-nav {
@@ -70,7 +72,6 @@
     .mobile-menu {
       display: none;
     }
-  }
 }
 
 @include md {
@@ -80,7 +81,7 @@
     .nav-right {
       width: auto;
 
-      ul {
+      .desktop-menu {
         display: none;
       }
 
@@ -119,17 +120,45 @@
       /* Mobile dropdown menu */
       .mobile-menu {
         position: absolute;
-        top: 60px;
+        top: 0;
         left: 0;
         width: 100%;
-        backdrop-filter: blur(10px);
+        height: 100vh;
+          -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 4rem;
         padding: 1.5rem 0;
-        gap: 1rem;
         animation: slideDown 0.4s ease forwards;
-        
+
+         li {
+          font-weight: 300;
+          font-size: 1.2rem;
+  
+          a {
+            color: $secondary-font-color;
+            transition: all 0.5s ease;
+          }
+  
+          :hover {
+            background-color: $secondary-font-color;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: $primary-font-color;
+          }
+  
+          &.active {
+            > a {
+              background-color: $secondary-font-color;
+              padding: 8px 16px;
+              border-radius: 8px;
+              color: $primary-font-color;
+            }
+          }
+        }
       }
     }
   }
